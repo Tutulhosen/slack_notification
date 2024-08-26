@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\SalatTime;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SalatTimeController extends Controller
 {
@@ -73,6 +75,7 @@ class SalatTimeController extends Controller
      */
     public function update(Request $request, $id)
     {
+        
         // Validate the incoming request data
         $validatedData = $request->validate([
             'salat_name' => 'required|string|max:255',
