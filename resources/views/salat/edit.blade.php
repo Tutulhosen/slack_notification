@@ -12,6 +12,7 @@
                     @if(session('success'))
                         <div class="alert alert-success">{{ session('success') }}</div>
                     @endif
+                    
                     <form action="{{ route('salat-time.update', $salatTime->id) }}" method="POST">
                         @csrf
                        
