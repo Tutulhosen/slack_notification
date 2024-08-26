@@ -105,7 +105,7 @@ class SalatTimeController extends Controller
         $salatTime = SalatTime::findOrFail($id);
 
         // Delete the record
-        $salatTime->delete();
+        $salatTime->delete();   
 
         // Redirect back with a success message
         return redirect()->route('salat-time.index')->with('success', 'Salat time deleted successfully.');
