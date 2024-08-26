@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/test-env', function () {
+    return env('SLACK_WEBHOOK_URL');
+});
 Route::group(['prefix'=>'salat-time','as'=>'salat-time.'], function(){
     Route::get('/', [SalatTimeController::class, 'index'])->name('index');
     Route::get('/create', [SalatTimeController::class, 'create'])->name('create');
